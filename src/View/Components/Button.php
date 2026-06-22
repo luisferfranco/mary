@@ -88,7 +88,7 @@ class Button extends Component
 
                     <!-- LABEL / SLOT -->
                     @if($label)
-                        <span @class(["hidden lg:block" => $responsive ])>
+                        <span class="uppercase tracking-widest font-bold" @class(["hidden lg:block" => $responsive ])>
                             {{ $label }}
                         </span>
                         @if(strlen($badge ?? '') > 0)

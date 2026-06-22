@@ -21,7 +21,7 @@ class Badge extends Component
     public function render(): View|Closure|string
     {
         return <<<'HTML'
-                <div {{ $attributes->class(["badge"])}}>
+                <div {{ $attributes->class(["badge uppercase tracking-wide"])}}>
                     {{ $value }}
                 </div>
             HTML;

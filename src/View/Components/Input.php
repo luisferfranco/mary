@@ -81,7 +81,7 @@ class Input extends Component
                 <fieldset class="fieldset py-0">
                     {{-- STANDARD LABEL --}}
                     @if($label && !$inline)
-                        <legend class="fieldset-legend mb-0.5">
+                        <legend class="fieldset-legend uppercase tracking-widest font-bold text-xs -mb-2">
                             {{ $label }}
 
                             @if($attributes->get('required'))
@@ -122,7 +122,7 @@ class Input extends Component
 
                                 {{
                                     $attributes->whereStartsWith('class')->class([
-                                        "input w-full",
+                                        "input w-full outline-none!",
                                         "join-item" => $prepend || $append,
                                         "border-dashed" => $isReadonly(),
                                         "!input-error" => $errorFieldName() && $errors->has($errorFieldName()) && !$omitError
@@ -226,7 +226,7 @@ class Input extends Component
 
                     {{-- HINT --}}
                     @if($hint)
-                        <div class="{{ $hintClass }}" x-classes="fieldset-label">{{ $hint }}</div>
+                        <div class="-mt-2 {{ $hintClass }}" x-classes="fieldset-label">{{ $hint }}</div>
                     @endif
                 </fieldset>
             </div>
