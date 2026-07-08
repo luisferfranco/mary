@@ -139,7 +139,7 @@ class File extends Component
                     <fieldset class="fieldset py-0">
                         {{-- STANDARD LABEL --}}
                         @if($label)
-                            <legend class="fieldset-legend mb-0.5">
+                        <legend class="fieldset-legend uppercase tracking-widest font-bold text-xs -mb-2">
                                 {{ $label }}
 
                                 @if($attributes->get('required'))
