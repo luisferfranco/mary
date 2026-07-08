@@ -85,7 +85,7 @@ class Input extends Component
                             {{ $label }}
 
                             @if($attributes->get('required'))
-                                <span class="text-error">*</span>
+                                <span class="text-error -ml-2">*</span>
                             @endif
 
                             {{-- INPUT POPOVER --}}

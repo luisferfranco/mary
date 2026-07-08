@@ -62,11 +62,11 @@ class Select extends Component
                 <fieldset class="fieldset py-0">
                     {{-- STANDARD LABEL --}}
                     @if($label && !$inline)
-                        <legend class="fieldset-legend mb-0.5">
+                        <legend class="fieldset-legend uppercase tracking-widest font-bold text-xs -mb-2">
                             {{ $label }}
 
                             @if($attributes->get('required'))
-                                <span class="text-error">*</span>
+                                <span class="text-error -ml-2">*</span>
                             @endif
                         </legend>
                     @endif
@@ -87,7 +87,7 @@ class Select extends Component
                             <label
                                 {{
                                     $attributes->whereStartsWith('class')->class([
-                                        "select w-full",
+                                        "select w-full outline-none!",
                                         "join-item" => $prepend || $append,
                                         "border-dashed" => $attributes->has("readonly") && $attributes->get("readonly") == true,
                                         "!select-error" => $errorFieldName() && $errors->has($errorFieldName()) && !$omitError
