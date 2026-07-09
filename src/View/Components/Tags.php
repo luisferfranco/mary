@@ -202,7 +202,7 @@ class Tags extends Component
                                         id="{{ $uuid }}"
                                         type="text"
                                         enterkeyhint="done"
-                                        class="w-1 !inline-block"
+                                        class="w-1 !inline-block outline-none!"
                                         x-ref="searchInput"
                                         :required="isRequired"
                                         :readonly="isReadonly"
