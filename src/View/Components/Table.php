@@ -40,7 +40,7 @@ class Table extends Component
         public string $containerClass = 'overflow-x-auto',
         public ?bool $noHover = false,
         public ?bool $fluent = false,
-        public ?string $rowHoverClass = 'hover:bg-base-200',
+        public ?string $rowHoverClass = 'bg-base-200',
 
         // Slots
         public mixed $actions = null,
