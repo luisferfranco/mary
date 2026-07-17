@@ -40,6 +40,7 @@ class Table extends Component
         public string $containerClass = 'overflow-x-auto',
         public ?bool $noHover = false,
         public ?bool $fluent = false,
+        public ?string $rowHoverClass = 'hover:bg-base-200',
 
         // Slots
         public mixed $actions = null,
@@ -333,7 +334,7 @@ class Table extends Component
                             @foreach($rows as $k => $row)
                                 <tr
                                     wire:key="{{ $uuid }}-{{ $k }}"
-                                    @class([$rowClasses($row), "hover:bg-base-200" => !$noHover])
+                                    @class([$rowClasses($row), "hover:$rowHoverClass" => !$noHover])
                                     @if($attributes->has('@row-click'))
                                         @click="$dispatch('row-click', {{ json_encode($row) }});"
                                     @endif
